@@ -6,7 +6,7 @@ class JulianToGregorianCalendar(DatePreparator):
         DatePreparator.__init__(self)        
         self.greg2jul()
         
-        # Checks the date and continues. Returns a warning if the date took place after 1582. 
+        # Checks the date and continues. Returns a warning for dates before 1582. 
         if DatePreparator.date_check(self) is True:
             print("\t| Achtung! Der gregorianische Kalender wurde am 15. Oktober 1582 eingeführt.\n"
                   "\t| Datumsangaben vor diesem Tag werden nicht umgerechnet.")
